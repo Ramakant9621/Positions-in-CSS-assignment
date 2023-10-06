@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+        }
+
+        #box1 {
+            background-color: red;
+            left: 50px;
+            z-index: 2;
+            
+        }
+
+        #box2 {
+            background-color: blue;
+            left: 100px;
+            z-index: 1;
+        }
+
+        #box3 {
+            background-color: green;
+            left: 150px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>The z-index property in CSS is used to control the stacking order of positioned elements. It determines the order in which elements are displayed along the z-axis (perpendicular to the screen). An element with a higher z-index will be displayed on top of elements with lower z-index values.</p>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+</body>
+</html>

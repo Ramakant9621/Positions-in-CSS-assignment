@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Comparison of Absolute vs Relative Positioning</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Absolute Positioning</th>
+            <th>Relative Positioning</th>
+        </tr>
+        <tr>
+            <td>Position Reference</td>
+            <td>Positioned relative to the nearest positioned ancestor (or the initial containing block if no positioned ancestor).</td>
+            <td>Positioned relative to its normal position in the document flow.</td>
+        </tr>
+        <tr>
+            <td>Effect on Document Flow</td>
+            <td>Does not affect the position of other elements; it is taken out of the normal flow.</td>
+            <td>Does not remove the element from the normal flow; other elements will still interact with it.</td>
+        </tr>
+        <tr>
+            <td>Top, Right, Bottom, Left</td>
+            <td>Positioned based on the top, right, bottom, or left edges of the nearest positioned ancestor.</td>
+            <td>Positioned based on its normal position in the document flow, then offset according to the specified values.</td>
+        </tr>
+        <tr>
+            <td>Example</td>
+            <td><code>position: absolute; top: 50px; left: 50px;</code></td>
+            <td><code>position: relative; top: 50px; left: 50px;</code></td>
+        </tr>
+        <tr>
+            <td>Interaction with Siblings</td>
+            <td>Does not push or affect the position of other siblings.</td>
+            <td>May push or affect the position of other siblings if there is overlap.</td>
+        </tr>
+    </table>
+</body>
+</html>

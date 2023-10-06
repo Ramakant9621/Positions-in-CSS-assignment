@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #6112e9;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="boxA"></div>
+    <div class="box" id="boxB"></div>
+    <div class="box" id="boxC"></div>
+    <div class="box" id="boxD"></div>
+    <div class="box" id="boxE"></div>
+
+    <script>
+        function positionBoxes() {
+            const boxA = document.getElementById('boxA');
+            const boxB = document.getElementById('boxB');
+            const boxC = document.getElementById('boxC');
+            const boxD = document.getElementById('boxD');
+            const boxE = document.getElementById('boxE');
+
+            // Positioning box A
+            boxA.style.top = '100px';
+            boxA.style.left = '100px';
+
+            // Positioning boxes B, C, D, and E relative to box A
+            positionRelativeToBoxA(boxB, -30, -30);
+            positionRelativeToBoxA(boxC, 30, -30);
+            positionRelativeToBoxA(boxD, -30, 30);
+            positionRelativeToBoxA(boxE, 30, 30);
+        }
+
+        function positionRelativeToBoxA(box, offsetX, offsetY) {
+            const boxA = document.getElementById('boxA');
+            const boxACenterX = boxA.offsetLeft + boxA.clientWidth / 2;
+            const boxACenterY = boxA.offsetTop + boxA.clientHeight / 2;
+
+            box.style.left = boxACenterX + offsetX - box.clientWidth / 2 + 'px';
+            box.style.top = boxACenterY + offsetY - box.clientHeight / 2 + 'px';
+        }
+
+        // Call the function to initially position the boxes
+        positionBoxes();
+    </script>
+</body>
+</html>
